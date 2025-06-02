@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    int i, c_numeros, numero;
+    int i, j=1, c_numeros, numero;
     double promedioNoNegativos, suma, c_noNegativos;
     suma=0;
     c_noNegativos=0;
@@ -10,6 +10,8 @@ int main() {
     cin>>c_numeros;
     cout<<"Ingrese los numeros: "<<endl;
     for (i=1;i<=c_numeros;i++){
+    	cout<<j<<". ";
+    	j++;
         cin>>numero;
         if (numero>=0){
             suma+=numero;
@@ -17,6 +19,7 @@ int main() {
         }
     }
     promedioNoNegativos=suma/c_noNegativos;
+    cout<<"Cantidad de no negativos: "<<c_noNegativos<<endl;
     cout<<"Promedio de no negativos: "<<promedioNoNegativos;
     return 0;
 }
